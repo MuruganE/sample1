@@ -1,11 +1,13 @@
 
 NOTE: soure Path(HOST golang path) can be changed but destination should not.
 	  source PATH: /root/github-lvs.corpzone.internalzone.com/misp/
-	  *) $chmod +x *.sh 
+	  
+	  *)  $chmod +x *.sh 
 
 docker run -it --rm -v /root/github-lvs.corpzone.internalzone.com/misp/logger:/go/src/github-lvs.corpzone.internalzone.com/misp/logger -v /root/github-lvs.corpzone.internalzone.com/misp/samsung-shared-api:/go/src/github-lvs.corpzone.internalzone.com/misp/samsung-shared-api   -v /root/github-lvs.corpzone.internalzone.com/misp/gocache:/go/src/github-lvs.corpzone.internalzone.com/misp/gocache   -v /root/github-lvs.corpzone.internalzone.com/misp/gtigo:/go/src/github-lvs.corpzone.internalzone.com/misp/gtigo   -v /root/github-lvs.corpzone.internalzone.com/misp/metrigo:/go/src/github-lvs.corpzone.internalzone.com/misp/metrigo   -v /root/github-lvs.corpzone.internalzone.com/misp/gacollect:/go/src/github-lvs.corpzone.internalzone.com/misp/gacollect -v /root/github-lvs.corpzone.internalzone.com/misp/samsung-frontend-api/afgrpc:/go/src/github-lvs.corpzone.internalzone.com/misp/samsung-frontend-api/afgrpc -v /root/github-lvs.corpzone.internalzone.com/misp/samsung-frontend-api/api:/go/src/github-lvs.corpzone.internalzone.com/misp/samsung-frontend-api/api -v /root/github-lvs.corpzone.internalzone.com/misp/samsung-frontend-api/client:/go/src/github-lvs.corpzone.internalzone.com/misp/samsung-frontend-api/client -v `pwd`/samsung-frontend-api:/go/src/samsung-frontend-api  --entrypoint=/go/src/samsung-frontend-api/build.sh -w="/go/src/samsung-frontend-api" golang
 
 
+#this is used for building docker images...
 docker build -t <image_name>
 
 docker run -d --name <container_name> -p 8087:8087 -p 9110:9110 -e LOGLEVELS=INFO -v  $(pwd)/config.json:/config.json <image_name>
