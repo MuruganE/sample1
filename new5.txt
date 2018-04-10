@@ -2,8 +2,8 @@ https://mcafee-apiserver-ie.northghost.com/mcafee/status
 
 Token : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6dHJ1ZSwiZXhwIjoxNTEwMzc3MjAyLCJuYmYiOjE1MTAyOTAyMDIsInByb2plY3QiOiJtY2FmZWUifQ.psdpWVDtHBxdGgWZhuEGG39NkwDO4e8gPJ_wmQtY4Ac"
 
-
-{"service_id":"test_2017-04-30","future_recurrences":12}
+  
+{ "service_id":"test_2017-04-30","future_recurrences":12}
 
 [
     {
