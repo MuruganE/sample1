@@ -1,0 +1,36 @@
+
+NOTE: soure Path(HOST golang path) can be changed but destination should not.
+	  source PATH: /root/github-lvs.corpzone.internalzone.com/misp/
+	  *) $chmod +x *.sh 
+
+docker run -it --rm -v /root/github-lvs.corpzone.internalzone.com/misp/logger:/go/src/github-lvs.corpzone.internalzone.com/misp/logger -v /root/github-lvs.corpzone.internalzone.com/misp/samsung-shared-api:/go/src/github-lvs.corpzone.internalzone.com/misp/samsung-shared-api   -v /root/github-lvs.corpzone.internalzone.com/misp/gocache:/go/src/github-lvs.corpzone.internalzone.com/misp/gocache   -v /root/github-lvs.corpzone.internalzone.com/misp/gtigo:/go/src/github-lvs.corpzone.internalzone.com/misp/gtigo   -v /root/github-lvs.corpzone.internalzone.com/misp/metrigo:/go/src/github-lvs.corpzone.internalzone.com/misp/metrigo   -v /root/github-lvs.corpzone.internalzone.com/misp/gacollect:/go/src/github-lvs.corpzone.internalzone.com/misp/gacollect -v /root/github-lvs.corpzone.internalzone.com/misp/samsung-frontend-api/afgrpc:/go/src/github-lvs.corpzone.internalzone.com/misp/samsung-frontend-api/afgrpc -v /root/github-lvs.corpzone.internalzone.com/misp/samsung-frontend-api/api:/go/src/github-lvs.corpzone.internalzone.com/misp/samsung-frontend-api/api -v /root/github-lvs.corpzone.internalzone.com/misp/samsung-frontend-api/client:/go/src/github-lvs.corpzone.internalzone.com/misp/samsung-frontend-api/client -v `pwd`/samsung-frontend-api:/go/src/samsung-frontend-api  --entrypoint=/go/src/samsung-frontend-api/build.sh -w="/go/src/samsung-frontend-api" golang
+
+
+docker build -t <image_name>
+
+docker run -d --name <container_name> -p 8087:8087 -p 9110:9110 -e LOGLEVELS=INFO -v  $(pwd)/config.json:/config.json <image_name>
+
+curl -X POST http://localhost:8087/vpn/user/murus-ffff-USA/127.0.0.1/connected
+curl http://localhost:8087/local/policy/127.0.0.1/serials.ws/eval
+curl http://localhost:8087/local/policy/127.0.0.1/ads.nexage.com/eval 
+
+=================================================================================================
+https://safeconnectsdkqa.mcafee.com/vbsp/api/v1/provision/device/features/adblocker
+https://safeconnectsdkqa.mcafee.com/vbsp/api/v1/register/provision/device/add 
+https://safeconnectsdkqa.mcafee.com/vbsp/api/v1/register/provision/device/remove 
+
+user_name-device_identy-carrier
+
+66a0072939487f6999eb9d18a4478404_5d87f3c67cf2367951baa2ff6cd471c4_mcafee
+5d87f3c67cf2367951baa2ff6cd471c4
+
+1d95d7c621717c560f1d260ab3624ed6_168d77c48317795f2e5a7569d7ad323c_mcafee
+168d77c48317795f2e5a7569d7ad323c
+
+:<id:"9566c74d10037c4d7bbb0407d1e2c649" server:"someserver" protocol:"hydra-tcp" username:"81855ad8681d0d86d1e91e00167939cb" remote_address:"127.0.0.1" internal_address:"10.10.0.2" start_time:1519735954 credentials:<user_id:1776148 user_name:"66a0072939487f6999eb9d18a4478404" user_auth:"anonymous" device_id:3669287 device_ident:"5d87f3c67cf2367951baa2ff6cd471c4" device_name:"83f15fb90badb37c5821b6d95526a41a" device_type:"9504680b4e7c8b763a1b1d49d4955c84" protocol:"hydra-tcp" create_time:1519735894 expire_time:1519822294 vpn_username:"86216325253fec738dd7a9e28bf92111" vpn_password:"9c160f0702448615bbda08313f6a8eb6" server_id:1 server_name:"someserver" server_ip:"127.0.0.1" server_domain:"someserver.northghost.com" server_country:"us" server_group:"mf" server_maxload:1000 carrier_id:27 carrier:"mcafee" license_name:"example" license_devices:1000 license_sessions:1000 user_country:"US" > >
+[VERBOSE] api   - Requesting user 66a0072939487f6999eb9d18a4478404_5d87f3c67cf2367951baa2ff6cd471c4_mcafee with {"provision_id":"66a0072939487f6999eb9d18a4478404_5d87f3c67cf2367951baa2ff6cd471c4_mcafee","device_id":"5d87f3c67cf2367951baa2ff6cd471c4"}
+
+
+
+
+export CONNECTION_SOURCE=unix:///tmp/test.sock
