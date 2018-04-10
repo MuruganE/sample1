@@ -1,0 +1,68 @@
+https://mcafee-apiserver-ie.northghost.com/mcafee/status
+
+Token : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6dHJ1ZSwiZXhwIjoxNTEwMzc3MjAyLCJuYmYiOjE1MTAyOTAyMDIsInByb2plY3QiOiJtY2FmZWUifQ.psdpWVDtHBxdGgWZhuEGG39NkwDO4e8gPJ_wmQtY4Ac"
+
+
+{"service_id":"test_2017-04-30","future_recurrences":12}
+
+[
+    {
+        "id": "1",
+        "start_time": 1509462245000,
+        "expire_time": 1512054245000,
+        "is_recurring": true,
+        "is_active": true,
+        "traffic_limit": 262144000,
+        "traffic_usage": 0,
+        "future_recurrences": [
+            {
+                "start_time": 1512054245000,
+                "expire_time": 1514732645000
+            },
+            {
+                "start_time": 1514732645000,
+                "expire_time": 1517411045000
+            },
+            {
+                "start_time": 1517411045000,
+                "expire_time": 1519830245000
+            },
+            {
+                "start_time": 1519830245000,
+                "expire_time": 1522508645000
+            },
+            {
+                "start_time": 1522508645000,
+                "expire_time": 1525100645000
+            },
+            {
+                "start_time": 1525100645000,
+                "expire_time": 1527779045000
+            },
+            {
+                "start_time": 1527779045000,
+                "expire_time": 1530371045000
+            },
+            {
+                "start_time": 1530371045000,
+                "expire_time": 1533049445000
+            },
+            {
+                "start_time": 1533049445000,
+                "expire_time": 1535727845000
+            },
+            {
+                "start_time": 1535727845000,
+                "expire_time": 1538319845000
+            },
+            {
+                "start_time": 1538319845000,
+                "expire_time": 1540998245000
+            },
+            {
+                "start_time": 1540998245000,
+                "expire_time": 1543590245000
+            }
+        ]
+    }
+]
